@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Flash
 
-def index(req):
-    return render(req, 'base.html')
+class FlashList(ListView):
+    model=Flash
+    template_name='flashcard.html'
+    context_object_name='flashcards'

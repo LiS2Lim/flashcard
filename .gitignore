@@ -2,3 +2,4 @@ config.py
 .static_root/*
 *.swp
 .vim/*
+__pycache__/
