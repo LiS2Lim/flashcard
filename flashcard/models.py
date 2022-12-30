@@ -6,7 +6,7 @@ class Flash(models.Model):
     answer=models.TextField()
     tags=models.ManyToManyField('Tag')
     created_at=models.DateField(auto_now_add=True)
-    count=models.IntegerField()
+    count=models.IntegerField(default=0)
 
     def __str__(self):
         return self.key
