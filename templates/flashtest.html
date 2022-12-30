@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
 {% block head %}
-	<title>flash card application</title>
-	<meta name="keywords" content="flash, card, note, text, study" />
+<title>flash card {{plashcard.key}}</title>
+<meta name="keywords" content='{{plashcard.key}},flash, card, note, text, study' />
 	<meta name="discription" content="This is flash card for study" />
 {% endblock head %}
 
 {% block body %}
 <div class="row">
+{% for flashcard in flashcards %}
 	<div class="col-6 col-sm-4 col-md-3 col-lg-2 mt-3">
 		<div class="card">
 			<div class="card-body">
@@ -18,5 +19,6 @@
 			</div>
 		</div>
 	</div>
+{% endfor %}
 </div>
 {% endblock body %}
