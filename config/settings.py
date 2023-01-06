@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'flashcard.apps.FlashcardConfig',
+    'common.apps.CommonConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,3 +79,5 @@ STATICFILES_DIRS = [ BASE_DIR / 'static/' ]
 STATIC_ROOT = BASE_DIR / '.static_root'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
