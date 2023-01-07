@@ -20,8 +20,18 @@
 	{% endblock head %}
 </head>
 <body>
-	<div class="navbar navbar-dark bg-dark">
-		<h3 class="navbar-brand ms-3">Flash cards</h3>
+	<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<h3 class="ms-3"><a class="navbar-brand" href="/">Flash cards</a></h3>
+			<div class="d-flex justify-contnet-end">
+				{% if user.is_authenticated %}
+					<div class="me-3 text-white">{{user.username}} 様</div>
+					<a class="me-3 nav-link btn-outline-light btn-sm" href="{% url 'common:logout' %}">Logout</a>
+				{% else %}
+					<div class="me-3"><a class="nav-link btn-outline-light btn-sm" href="{% url 'common:login' %}">Login</a></div>
+				{% endif %}
+			</div>
+		</div>
 	</div>
 	<div class="container">
 	{% block body %}

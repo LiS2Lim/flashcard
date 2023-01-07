@@ -1,8 +1,5 @@
 {% extends 'base.html' %}
 {% block body %}
-{% if user.is_authenticated %}
-{{user.username}}
-{% endif %}
 <div class="container">
 	<form method="post" action="{% url 'common:login' %}">
 		{% csrf_token %}
