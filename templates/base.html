@@ -25,10 +25,11 @@
 			<h3 class="ms-3"><a class="navbar-brand" href="/">Flash cards</a></h3>
 			<div class="d-flex justify-contnet-end">
 				{% if user.is_authenticated %}
-					<div class="me-3 text-white">{{user.username}} 様</div>
+					<p class="me-3 text-white align-middle">{{user.username}} 様</p>
 					<a class="me-3 nav-link btn-outline-light btn-sm" href="{% url 'common:logout' %}">Logout</a>
 				{% else %}
 					<div class="me-3"><a class="nav-link btn-outline-light btn-sm" href="{% url 'common:login' %}">Login</a></div>
+					<div class="me-3"><a class="nav-link btn-outline-light btn-sm" href="{% url 'common:signup' %}">Sign-up</a></div>
 				{% endif %}
 			</div>
 		</div>
