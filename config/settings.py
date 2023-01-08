@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'flashcard.apps.FlashcardConfig',
+    'common.apps.CommonConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +70,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = 'ko'
-TIME_ZONE = 'Asia/Seoul'
+TIME_ZONE = 'Asia/Tokyo'
 USE_I18N = True
 USE_TZ = True
 
@@ -78,3 +79,6 @@ STATICFILES_DIRS = [ BASE_DIR / 'static/' ]
 STATIC_ROOT = BASE_DIR / '.static_root'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
